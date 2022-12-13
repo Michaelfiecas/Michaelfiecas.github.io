@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Michael Bunuan Portfolio Website</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/d955c3eb45.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+            <nav>
+                <img src="mb.png" class="logo">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT ME</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web <span>Design</span></p>
+                <h1>I'm <span>Michael</span></h1>
+            </div>
+        </div>
+    </div>
+    <!-- -----------about----------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src=".jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm Michael Bunuan, Bachelor of Science in Information Technology graduate, 
+                        aspiring to be a software developer. My past jobs were more on hardware and networking, 
+                        I want to challenge myself and test my sofware skills  </p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p> 
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Web Design</span><br> C++, HTML, CSS, JS</li>
+                                <li><span>Networking</span><br>Network maintenance Monitor problem of Router and Switches connections</li>
+                                <li><span>Installing OS</span><br> Windows 7,8,10,11</li>
+                                <li><span>Computer Troubleshooting</span><br>Computer Formatting</li>
+                                <li><span>Configurations</span> <br></r> Firewall, Access point, router, switch</li>
+                                <li><span>Server and Network</span> <br>Configuration and Maintenance</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Columbia Technologies Inc,</span><br>TECHNICAL INSTALLER</li>
+                                <li><span>Zenshin Systems Corporation</span><br>TECHNICAL SUPPORT/SUPPORT ENGINEER</li>
+                                <li><span>Hopewell Sales Corporation</span><br> IT STAFF</li>
+                                <li><span>Salemaire Industries Corporation</span><br>IT STAFF</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2006-2011</span><br> Esteban Abada Elementary School</li>
+                                <li><span>2011-2015</span><br>San Francisco High School</li>
+                                <li><span>2015-2019</span><br> Acess Computer College</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- ---------contact--------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fa-solid fa-paper-plane"></i>Bunuan44@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i>09753448312</p>
+            <div class="social-icons">
+                <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://gmail.com/"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <a href="my-cv.pdf" download class="btn btn2">Download CV</a>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+ </script>
+
+</body>
+</html>
